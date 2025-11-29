@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyber Defense 2D", "Cyber Defense 2D.csproj", "{17CE2E72-2B5E-41DB-8A57-7F9A34C1796E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17CE2E72-2B5E-41DB-8A57-7F9A34C1796E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17CE2E72-2B5E-41DB-8A57-7F9A34C1796E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17CE2E72-2B5E-41DB-8A57-7F9A34C1796E}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{17CE2E72-2B5E-41DB-8A57-7F9A34C1796E}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{17CE2E72-2B5E-41DB-8A57-7F9A34C1796E}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{17CE2E72-2B5E-41DB-8A57-7F9A34C1796E}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

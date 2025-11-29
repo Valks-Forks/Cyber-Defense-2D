@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce53h5e12s2fv"]
+
+[ext_resource type="Texture2D" uid="uid://d4g8jfcdaik4b" path="res://Sprite/scoring and health/currency.png" id="1_3xa1o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vw27"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_kek77"]
+Panel/styles/panel = SubResource("StyleBoxFlat_5vw27")
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 205.0
+offset_bottom = 20.0
+theme = SubResource("Theme_kek77")
+
+[node name="Currency" type="Sprite2D" parent="Panel"]
+position = Vector2(75, 8)
+scale = Vector2(0.023000002, 0.022000002)
+texture = ExtResource("1_3xa1o")
+
+[node name="CoinsLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 2.0
+offset_right = 111.0
+offset_bottom = 14.0
+theme_override_font_sizes/font_size = 8
+text = "Coins: "
+
+[node name="HealthLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 2.0
+offset_right = 40.0
+offset_bottom = 14.0
+theme_override_font_sizes/font_size = 8
+text = "Health: "
+
+[node name="WaveLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 2.0
+offset_right = 162.0
+offset_bottom = 14.0
+theme_override_font_sizes/font_size = 8
+text = "Wave"

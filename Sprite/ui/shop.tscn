@@ -1,0 +1,78 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3172k0tfxxmf"]
+
+[ext_resource type="PackedScene" uid="uid://dmeqbqa75na6r" path="res://Sprite/ui/firewall_tower_panel.tscn" id="1_8j4gr"]
+[ext_resource type="PackedScene" uid="uid://b0iaeglx7elg4" path="res://Sprite/ui/anti_virus_tower_panel.tscn" id="2_b2t53"]
+[ext_resource type="PackedScene" uid="uid://bdmhf4sawmnop" path="res://Sprite/ui/ids_tower_panel.tscn" id="3_1gbx0"]
+[ext_resource type="Script" uid="uid://b00sr667sto1f" path="res://Script/ShopPanel.cs" id="4_ormwy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b2t53"]
+bg_color = Color(0.21568628, 0.21568628, 0.21568628, 0.7254902)
+
+[sub_resource type="Theme" id="Theme_1gbx0"]
+Panel/styles/panel = SubResource("StyleBoxFlat_b2t53")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8j4gr"]
+bg_color = Color(0.19607843, 0.19607843, 0.19607843, 0.68235296)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id="Theme_8j4gr"]
+Panel/styles/panel = SubResource("StyleBoxFlat_8j4gr")
+
+[node name="Shop" type="CanvasLayer"]
+layer = 0
+
+[node name="ShopPanel" type="Panel" parent="."]
+offset_left = 535.0
+offset_top = 9.0
+offset_right = 592.0
+offset_bottom = 34.0
+theme = SubResource("Theme_1gbx0")
+script = ExtResource("4_ormwy")
+
+[node name="Label" type="Label" parent="ShopPanel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 4.0
+offset_right = 44.0
+offset_bottom = 21.0
+theme_override_font_sizes/font_size = 12
+text = "Shop"
+
+[node name="Shop" type="Panel" parent="."]
+visible = false
+offset_left = 142.0
+offset_top = 53.0
+offset_right = 460.0
+offset_bottom = 353.0
+theme = SubResource("Theme_8j4gr")
+
+[node name="FlowContainer" type="FlowContainer" parent="Shop"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 73.0
+offset_right = 221.0
+offset_bottom = 239.0
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 5
+
+[node name="FirewallTowerPanel" parent="Shop/FlowContainer" instance=ExtResource("1_8j4gr")]
+layout_mode = 2
+
+[node name="AntiVirusPanel" parent="Shop/FlowContainer" instance=ExtResource("2_b2t53")]
+layout_mode = 2
+
+[node name="IDSTowerPanel" parent="Shop/FlowContainer" instance=ExtResource("3_1gbx0")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Shop"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 8.0
+offset_right = 106.0
+offset_bottom = 31.0
+text = "Tower Shop"
+
+[connection signal="gui_input" from="ShopPanel" to="Shop/FlowContainer/FirewallTowerPanel" method="_on_menu_panel_gui_input"]

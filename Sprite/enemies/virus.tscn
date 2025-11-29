@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3p5d5djjmlfi"]
+
+[ext_resource type="Texture2D" uid="uid://be8t5qi1j36p3" path="res://Sprite/enemies/virus.png" id="1_8vvlv"]
+[ext_resource type="Script" uid="uid://dhvfsggyggav1" path="res://Script/Virus.cs" id="1_l483u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8vvlv"]
+
+[node name="Virus" type="CharacterBody2D"]
+script = ExtResource("1_l483u")
+
+[node name="Virus" type="Sprite2D" parent="."]
+position = Vector2(0.75000083, 0)
+scale = Vector2(0.047000006, 0.050000004)
+texture = ExtResource("1_8vvlv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.1, 1.1)
+shape = SubResource("CircleShape2D_8vvlv")

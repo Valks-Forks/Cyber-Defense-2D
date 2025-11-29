@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmeqbqa75na6r"]
+
+[ext_resource type="Script" uid="uid://bcgi5hsiggjbc" path="res://Script/FirewallTowerPanel.cs" id="1_03iuc"]
+[ext_resource type="Texture2D" uid="uid://ldii3fhp46ja" path="res://Sprite/tower/Firewall Tower.png" id="1_s3e1t"]
+[ext_resource type="Theme" uid="uid://c62ylpft0ap4m" path="res://Sprite/ui/style/button_theme.tres" id="1_tfcp1"]
+
+[node name="FirewallTowerPanel" type="Panel"]
+custom_minimum_size = Vector2(120, 40)
+offset_left = -1.0
+offset_right = 119.0
+offset_bottom = 40.0
+theme = ExtResource("1_tfcp1")
+script = ExtResource("1_03iuc")
+
+[node name="FirewallTower" type="Sprite2D" parent="."]
+position = Vector2(20, 20)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_s3e1t")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 7.0
+offset_right = 111.0
+offset_bottom = 34.0
+theme_override_font_sizes/font_size = 8
+text = "Buy Firewall Tower
+20"
+horizontal_alignment = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
